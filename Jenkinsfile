@@ -4,7 +4,7 @@ pipeline {
         stage('Test') {
             steps {
                 sh 'python --version'
-                python test.py
+                sh 'python test.py'
             }
         }
     }
