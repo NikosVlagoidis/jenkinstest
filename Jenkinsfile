@@ -3,8 +3,11 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh 'python --version'
-                sh 'python test.py'
+                sh 'python3 --version'
+                sh 'pip3 install -r requirements.txt'
+                sh 'flake8'
+                sh 'python3 test.py'
+
             }
         }
     }
