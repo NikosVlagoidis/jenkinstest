@@ -9,6 +9,10 @@ pipeline {
                 sh 'python3 test.py'
                 sh 'whoami'
                 sh 'python --version'
+                dir('docs') {
+                sh 'make html'
+                }
+
             }
         }
     }
