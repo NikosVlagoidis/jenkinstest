@@ -10,6 +10,7 @@ pipeline {
                 sh 'whoami'
                 sh 'python --version'
                 sh 'pwd'
+                sh 'ls -l'
                 sh './docs/make html'
 
                 dir('docs') {
