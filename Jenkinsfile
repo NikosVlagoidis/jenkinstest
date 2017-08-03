@@ -5,7 +5,7 @@ pipeline {
             steps {
 
                 sh 'make -C ./docs html'
-                sh 'cp -r ./docs/_build/ /var/jenkins_home/docs'
+                sh 'cp -r ./docs/_build/html /var/jenkins_home/docs/html'
             }
         }
     }
