@@ -3,7 +3,8 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'make -C ./docs html
+
+                sh 'make -C ./docs html'
             }
         }
     }
