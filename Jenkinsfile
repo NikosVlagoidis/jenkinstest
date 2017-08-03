@@ -12,11 +12,7 @@ pipeline {
                 sh 'pwd'
                 sh 'ls -l'
                 sh 'cat ./docs/index.rst'
-                sh './docs/make html'
-
-                dir('docs') {
-                    sh 'make html'
-                }
+                sh 'make -C ./docs html'
 
             }
         }
