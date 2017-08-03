@@ -5,7 +5,7 @@ pipeline {
             steps {
 
                 sh 'make -C ./docs html'
-                sh 'mv ./docs /var/jenkins_home/docs'
+                sh 'mv ./docs/_build/ /var/jenkins_home/docs'
             }
         }
     }
