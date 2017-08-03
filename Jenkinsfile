@@ -11,6 +11,7 @@ pipeline {
                 sh 'python --version'
                 sh 'pwd'
                 sh 'ls -l'
+                sh 'cat ./docs/index.rst'
                 sh './docs/make html'
 
                 dir('docs') {
