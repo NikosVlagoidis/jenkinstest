@@ -1,4 +1,4 @@
-FROM jenkins:latest
+FROM jenkins/jenkins:lts
 
 
 USER root
@@ -8,3 +8,5 @@ RUN pip3 install --upgrade setuptools
 RUN python3 --version
 RUN pip3 install sphinx
 RUN pip3 install sphinx-rtd-theme
+
+USER jenkins

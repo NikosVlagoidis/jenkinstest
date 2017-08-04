@@ -1,0 +1,29 @@
+version: "2"
+
+services:
+
+  jenkins:
+    build: .
+    restart: always
+    volumes:
+      - "/var/jenkins_home"
+    ports:
+      - "50000:50000"
+      - "8080:8080"
+    networks:
+      - jenkins-network
+
+  nginx:
+      build: ./nginx/
+      restart: always
+      volumes_from:
+        - jenkins
+      ports:
+        - "8888:80"
+      networks:
+        - jenkins-network
+
+networks:
+  jenkins-network:
+    external:
+      name: "Testing"
